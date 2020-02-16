@@ -1,0 +1,48 @@
+h1 {
+    font-size: 30px;
+    color: red;
+}
+
+h2 {
+    font-size: 22px;
+    color: blue
+}
+
+h1, h2 {
+    font-family: Arial;
+}
+
+p {
+    color: hotpink;
+    font-size: 14px;
+}
+
+a {
+    color:green;
+}
+
+a:hover {
+    color: orange;
+}
+
+#cabecera {
+    background-color: greenyellow;
+    padding: 14px;
+}
+
+#cabecera:hover {
+    background-color: indigo;
+}
+
+#primer_parrafo{
+    font-weight: 700;
+    font-style: italic;
+}
+
+.parrafo_par {
+    color: black;
+}
+
+.parrafo_iw {
+    color:gray
+}
