@@ -10,7 +10,7 @@ class Main(object):
     print("Fin")
     
     un_string = ""
-    conjunto_string = ["aitor", "mikel", "asier"]
+    conjunto_string = ["aitor", "mikel", "asier", "otro"]
     for un_string in conjunto_string:
         if(un_string == "mikel"):
             break
@@ -19,3 +19,11 @@ class Main(object):
     for i in range(len(conjunto_string)):
         print(conjunto_string[i])
 
+    print("--------------------------------------------------")
+    print(conjunto_string[3])
+
+    # Recorre en sentido contrario
+    print(conjunto_string[-3])
+
+    # Recorrer varios elementos [desde : hasta], no incluye la ultima 
+    print(conjunto_string[1:3])
