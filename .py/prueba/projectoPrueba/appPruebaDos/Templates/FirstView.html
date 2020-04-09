@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Mi primera página</title>                                         <!-- En la cabecera se encuentran cosas que no voy a mostrar!!, la etqueta title obviamente no muestra nada -->
+    </head>
+    <body>
+        <h1>Este es mi titulo de la app</h1>                                               <!-- Estas llaves se consideras etiquetas -->
+        <h2 style="color:red">Articulos de la app</h2>
+        <p>
+            <ul>
+                {% for articulo in listaArticulos %} 
+                <li>
+                    {{ articulo.id }}  :  {{ articulo.nombre}}
+                </li>
+                {% endfor %}
+            </ul>
+        </p>
+    </body>
+</html>

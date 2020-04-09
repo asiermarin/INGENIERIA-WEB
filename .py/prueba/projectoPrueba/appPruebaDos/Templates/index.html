@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titulo %}Titulo de articulos{% endblock %}
+
+{% block contenido %}
+<h2>Listado de articulos</h2>
+{% if listaArticulos %}
+	<ul>
+	{% for articulo in listaArticulos %}
+		<li>
+            <a href="/appPruebaDos/articulo/{{ articulo.id }}">{{ articulo.id }}  :  {{ articulo.nombre}}</a>
+            <a href="{% url 'detail' articulo.id %}">{{ d.nombre}}</a>
+        </li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay articulos creados.</p>
+{% endif %}
+{% endblock %}
