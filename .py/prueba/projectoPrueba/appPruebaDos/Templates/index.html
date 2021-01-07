@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
-{% block titulo %}Titulo de articulos{% endblock %}
+{% block titulo %}Esto es un index{% endblock %}
 
 {% block contenido %}
-<h2>Listado de articulos</h2>
-{% if listaArticulos %}
+<h2>Listado de articulos de index</h2>
+{% if listaArticulos %} 
 	<ul>
 	{% for articulo in listaArticulos %}
 		<li>
             <a href="/appPruebaDos/articulo/{{ articulo.id }}">{{ articulo.id }}  :  {{ articulo.nombre}}</a>
-            <a href="{% url 'detail' articulo.id %}">{{ d.nombre}}</a>
+        </li>
+		<li>
+			<a href="{% url 'artuculoDetailView' articulo.id %}">{{ articulo.nombre}}</a>
+        </li>
+		<li>
+			<a href="{% url 'detailView' articulo.id %}">{{ articulo.nombre}} para detail</a>
         </li>
 	{% endfor %}
 	</ul>

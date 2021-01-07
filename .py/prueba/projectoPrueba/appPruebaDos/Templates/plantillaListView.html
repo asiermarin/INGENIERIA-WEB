@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ tittle }}{% endblock %}
+
+{% block contenido %}
+<h2>Listado de articulos de la plantilla ListView</h2>
+
+<!-- De forma predeterminada se queda guardada en una variable llamada articulo_list si no se guardaba su nombre personalizada -->
+{% if lista_articulos_ya_existentes %}                                                 
+	<ul>
+	{% for articulo in lista_articulos_ya_existentes %}
+        <p>Con URL</p>
+		<li>
+			<a href="{% url 'artuculoDetailView' articulo.id %}">{{ articulo.nombre}} (articuloDetailView es el valor de la etiqueta name)</a>
+        </li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay articulos creados.</p>
+{% endif %}
+{% endblock %}

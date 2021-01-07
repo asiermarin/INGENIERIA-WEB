@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titulo %}Esto es un view{% endblock %}
+
+{% block contenido %}
+<h2>Listado de articulos de la plantilla View</h2>
+{% if listaArticulos %} 
+	<ul>
+	{% for articulo in listaArticulos %}
+        <p>Con URL</p>
+		<li>
+			<a href="{% url 'artuculoDetailView' articulo.id %}">{{ articulo.nombre}} (articuloDetailView es el valor de la etiqueta name)</a>
+        </li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay articulos creados.</p>
+{% endif %}
+{% endblock %}

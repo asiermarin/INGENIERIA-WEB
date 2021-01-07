@@ -9,3 +9,4 @@ class Alumno(Persona):
 # -----------------------------------------------------------        
 alumno = Alumno("Asier", 18, 5)
 print(alumno._Edad)
+alumno.Hablar()

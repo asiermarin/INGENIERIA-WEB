@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %}Esto es un DetailView{% endblock %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+
+<p>{{articulo.id}}</p>
+<p>{{articulo.genero}}</p>
+<p>{{articulo.nombre}}</p>
+<p>{{articulo.fecha_creacion}}</p>
+<p>{{articulo.numero_articulo}}</p>
+
+
+
+
+{% endblock %}

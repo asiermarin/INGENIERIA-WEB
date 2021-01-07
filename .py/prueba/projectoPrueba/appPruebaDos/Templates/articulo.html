@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{titulo}}{% endblock %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+
+<p>{{articuloExistente.id}}</p>
+<p>{{articuloExistente.genero}}</p>
+<p>{{articuloExistente.nombre}}</p>
+<p>{{articuloExistente.fecha_creacion}}</p>
+<p>{{articuloExistente.numero_articulo}}</p>
+
+{% endblock %}

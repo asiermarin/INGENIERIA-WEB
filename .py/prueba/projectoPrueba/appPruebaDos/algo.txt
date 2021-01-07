@@ -1,0 +1,7 @@
+_listaArticulos = Articulo.objects.order_by('id')
+    _nombreTitulo = 'titulo desde codigo'
+
+    def GetView(self, request):
+        context = {'titulo' : _nombreTitulo, 'listaArticulos' : _listaArticulos}
+
+        return render(request, _templateName, context)
